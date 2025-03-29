@@ -5,80 +5,95 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1d112e"
     tools:context=".MainActivity">
 
-    <ProgressBar
-        android:id="@+id/loadingSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="@id/submitButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+    <!-- ProgressBar -->
+<ProgressBar
+android:id="@+id/loadingSpinner"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:visibility="gone"
+app:layout_constraintTop_toBottomOf="@id/submitButton"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+android:layout_marginTop="16dp"
+android:indeterminateTint="#FFFFFF" />
 
     <!-- ImageView for the logo -->
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/crash_course_logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+<ImageView
+android:id="@+id/logoImageView"
+android:layout_width="200dp"
+android:layout_height="200dp"
+android:layout_marginTop="32dp"
+android:src="@drawable/crash_course_logo"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Label for the project name -->
-    <TextView
-        android:id="@+id/projectNameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Project Name"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/logoImageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+<TextView
+android:id="@+id/projectNameLabel"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp"
+android:text="Crash Course"
+android:textSize="35sp"
+    android:textColor="#FFFFFF"
+    app:layout_constraintTop_toBottomOf="@id/logoImageView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Label for the prompt -->
-    <TextView
-        android:id="@+id/promptLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Enter your prompt"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/projectNameLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+<TextView
+android:id="@+id/promptLabel"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="50dp"
+android:text="Enter your prompt below:"
+android:textSize="20sp"
+    android:textColor="#B0B0B0"
+    app:layout_constraintTop_toBottomOf="@id/projectNameLabel"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- TextBox for the prompt input -->
-    <EditText
-        android:id="@+id/promptEditText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="What would you like a crash course on?"
-        android:inputType="textMultiLine"
-        android:minLines="3"
-        app:layout_constraintTop_toBottomOf="@id/promptLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+<EditText
+android:id="@+id/promptEditText"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:paddingStart="16dp"
+android:hint="What would you like a crash course on?"
+    android:textColorHint="#474747"
+android:inputType="textMultiLine"
+android:minLines="3"
+    android:background="@drawable/rounded_edit_text"
+android:backgroundTint="#FFFFFF"
+    android:textColor="@color/black"
+    app:layout_constraintTop_toBottomOf="@id/promptLabel"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Submit button -->
-    <Button
-        android:id="@+id/submitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Submit"
-        app:layout_constraintTop_toBottomOf="@id/promptEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+<Button
+android:id="@+id/submitButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="50dp"
+android:text="Submit"
+android:textColor="#FFFFFF"
+    android:backgroundTint="#6200EE"
+    android:textSize="18sp"
+    app:layout_constraintTop_toBottomOf="@id/promptEditText"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>

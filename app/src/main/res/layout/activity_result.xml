@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1d112e"
     tools:context=".MainActivity">
 
     <!-- ImageView for the logo -->
@@ -12,11 +13,12 @@
         android:id="@+id/logoImageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/crash_course_logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Label for the project name -->
     <TextView
@@ -25,11 +27,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Crash Course"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="35sp"
+        android:textColor="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@id/logoImageView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Subject Header -->
     <TextView
@@ -37,12 +40,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Subject: Artificial Intelligence"
-        android:textSize="16sp"
+        android:textSize="20sp"
+        android:textColor="#B0B0B0"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@id/projectNameLabel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Bullet List -->
     <TextView
@@ -53,10 +58,26 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:text="• AI simulates human intelligence.\n• Machine learning is a subset of AI.\n• Neural networks mimic the human brain.\n• AI is used in self-driving cars, recommendation systems, and more."
-        android:textSize="14sp"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
         app:layout_constraintTop_toBottomOf="@id/subjectHeader"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Read Aloud button -->
+    <Button
+        android:id="@+id/readButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read Aloud"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#6200EE"
+        app:layout_constraintTop_toBottomOf="@id/factsList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <!-- Back button -->
     <Button
@@ -64,9 +85,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/factsList"
+        android:backgroundTint="#6200EE"
+        app:layout_constraintTop_toBottomOf="@id/readButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
