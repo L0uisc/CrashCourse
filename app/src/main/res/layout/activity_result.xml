@@ -64,6 +64,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Read Aloud button -->
+    <Button
+        android:id="@+id/readButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read Aloud"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#6200EE"
+        app:layout_constraintTop_toBottomOf="@id/factsList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
     <!-- Back button -->
     <Button
         android:id="@+id/backButton"
@@ -74,7 +89,7 @@
         android:textSize="18sp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#6200EE"
-        app:layout_constraintTop_toBottomOf="@id/factsList"
+        app:layout_constraintTop_toBottomOf="@id/readButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5" />
